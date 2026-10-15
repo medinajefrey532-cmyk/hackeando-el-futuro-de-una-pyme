@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y Codificación UTF-8 para Caracteres en Español -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger Digital | Contacto, Garantías de Continuidad & Soporte en RD</title>
+  <meta name="description" content="Comunícate con los asesores contables y de seguridad de Ledger Digital en Santo Domingo. Atención personalizada para PYMES en República Dominicana.">
+  
+  <!-- Preconexión e Importación de Tipografías desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Íconos Vectoriales Material Symbols de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- Hojas de Estilos: Estilos Corporativos Globales y Efectos de Pantalla de Contingencia -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glitch.css">
+</head>
+<body>
+
+
+
+  <!-- =====================================================================
+       CABECERA INSTITUCIONAL Y NAVEGACIÓN
+       ===================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logotipo de la Empresa -->
+      <a href="index.html" class="brand-logo" aria-label="Inicio Ledger Digital">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#070c14"/>
+          <path d="M8 10H28M8 18H22M8 26H28" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3" fill="#10b981"/>
+        </svg>
+        <span>Ledger<span class="accent">Digital</span></span>
+      </a>
+
+      <!-- Menú de Enlaces Principales -->
+      <nav id="navLinks" class="nav-links" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+      </nav>
+
+      <!-- Acciones de Cabecera -->
+      <div class="header-actions">
+        <a href="servicios.html#cotizador" class="btn btn-primary btn-sm">
+          <span>Cotizar en Línea</span>
+        </a>
+
+        <!-- Selector de Tema Visual -->
+        <button id="themeToggleBtn" class="theme-switch-btn" type="button" aria-label="Cambiar tema visual" title="Cambiar Tema">
+          <span id="themeToggleIcon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobileMenuBtn" class="mobile-menu-toggle" type="button" aria-label="Abrir Menú de Navegación">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       CONTENIDO PRINCIPAL: CONTACTO, OFICINA, MAPA Y GARANTÍAS DE SEGURIDAD
+       ===================================================================== -->
+  <main>
+    
+    <!-- -------------------------------------------------------------------
+         HERO DE CONTACTO & FORMULARIO DE CONSULTA EMPRESARIAL
+         ------------------------------------------------------------------- -->
+    <section class="section" style="padding-top: 5rem;">
+      <div class="container">
+        <div class="grid-2" style="align-items: start; gap: 3rem;">
+          
+          <!-- Columna Izquierda: Formulario Seguro de Contacto -->
+          <div class="card-glass" style="padding: 2.25rem;">
+            <div style="margin-bottom: 1.5rem;">
+              <div class="badge-tag badge-secondary" style="margin-bottom: 0.5rem;">
+                <span class="material-symbols-outlined text-[16px]">support_agent</span>
+                <span>ATENCIÓN DIRECTA A CLIENTES</span>
+              </div>
+              <h1 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.5rem;">
+                Comunícate con Nosotros
+              </h1>
+              <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">
+                Envíanos tu consulta sobre contabilidad en la nube o facturación e-CF. Un especialista tributario te responderá el mismo día laborable.
+              </p>
+            </div>
+
+            <!-- Formulario con Validación Front-End -->
+            <form id="secureContactForm" novalidate>
+              
+              <!-- Fila 1: Nombre de Empresa y RNC Dominicano -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="formCompanyName">Nombre de tu Empresa</label>
+                  <input type="text" id="formCompanyName" class="form-control" placeholder="Ej. Comercial Caribe S.R.L." required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formRnc">RNC Dominicano (9 u 11 dígitos)</label>
+                  <input type="text" id="formRnc" class="form-control font-mono" placeholder="1-32-94819-2" required>
+                </div>
+              </div>
+
+              <!-- Fila 2: Correo Electrónico y Teléfono Directo -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="formEmail">Correo Electrónico Corporativo</label>
+                  <input type="email" id="formEmail" class="form-control" placeholder="administracion@tuempresa.com.do" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formPhone">Teléfono / WhatsApp</label>
+                  <input type="tel" id="formPhone" class="form-control font-mono" placeholder="+1 (809) 000-0000" required>
+                </div>
+              </div>
+
+              <!-- Fila 3: Selección del Servicio de Interés -->
+              <div class="form-group">
+                <label class="form-label" for="formAdvisory">Servicio o Módulo Requerido</label>
+                <select id="formAdvisory" class="form-control" style="cursor: pointer;">
+                  <option value="cloud">Contabilidad Completa en la Nube</option>
+                  <option value="ecf">Facturación Electrónica e-CF DGII</option>
+                  <option value="security">Seguridad, Respaldos & Continuidad</option>
+                  <option value="migration">Migración desde Sistema Tradicional</option>
+                  <option value="consult">Asesoría Fiscal General</option>
+                </select>
+              </div>
+
+              <!-- Fila 4: Mensaje o Consulta Detallada -->
+              <div class="form-group">
+                <label class="form-label" for="formMessage">Describe tu Necesidad o Duda</label>
+                <textarea id="formMessage" class="form-control" placeholder="Cuéntanos cuántos comprobantes emites al mes o qué dudas tienes..." required rows="4"></textarea>
+              </div>
+
+              <!-- Botón de Envío -->
+              <button type="submit" id="btnSubmitForm" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+                <span id="submitBtnText">Enviar Consulta Empresarial</span>
+              </button>
+
+              <!-- Notificación de Éxito Tras el Envío -->
+              <div id="formSuccessToast" style="display: none; margin-top: 1.25rem; padding: 1rem; border-radius: var(--radius-md); background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.4); align-items: center; gap: 0.75rem;">
+                <span class="material-symbols-outlined text-secondary" style="font-size: 22px;">check_circle</span>
+                <span style="font-size: 0.88rem; color: var(--color-secondary);">
+                  ¡Consulta recibida con éxito! Uno de nuestros asesores en Santo Domingo te contactará en breve.
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <!-- Columna Derecha: Datos de Sede Física y Mapa Interactivo -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Tarjeta con Canales de Contacto Directo -->
+            <div class="card-glass" style="padding: 1.75rem;">
+              <h3 style="font-size: 1.2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;">
+                <span class="material-symbols-outlined text-primary">domain</span>
+                <span>Sede Central en Santo Domingo</span>
+              </h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                <!-- Ubicación Física -->
+                <div style="display: flex; align-items: flex-start; gap: 8px;">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px;">location_on</span>
+                  <span>Av. Winston Churchill, Sector Piantini, Distrito Nacional, República Dominicana.</span>
+                </div>
+                <!-- Línea Telefónica -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px;">call</span>
+                  <span>+1 (809) 555-0199 / WhatsApp Corporativo</span>
+                </div>
+                <!-- Correo Electrónico -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px;">mail</span>
+                  <span>contacto@ledgerdigital.do</span>
+                </div>
+                <!-- Horario de Operaciones -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 20px;">schedule</span>
+                  <span>Lunes a Viernes: 8:00 AM - 6:00 PM (Hora de RD)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mapa Interactivo Integrado de Google Maps -->
+            <div class="card-glass" style="padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span class="material-symbols-outlined text-primary" style="font-size: 18px;">map</span>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Ubicación en Google Maps</span>
+                </div>
+                <a href="https://maps.google.com/?q=Av.+Winston+Churchill,+Piantini,+Santo+Domingo,+Republica+Dominicana" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem; color: var(--color-primary); display: flex; align-items: center; gap: 3px; font-weight: 600;">
+                  <span>Abrir en App</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+
+              <!-- Iframe Seguro de Google Maps -->
+              <div style="width: 100%; height: 320px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);">
+                <iframe 
+                  title="Ubicación oficial de Ledger Digital Dominicana en Google Maps" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.3213192455825!2d-69.94317492415185!3d18.472449982611736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf89ef949589a1%3A0x7d6a5c13e5473d0!2sAv.%20Winston%20Churchill%2C%20Santo%20Domingo!5e0!3m2!1ses!2sdo!4v1710000000000!5m2!1ses!2sdo" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0; display:block;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.6rem; font-size: 0.75rem; color: var(--color-text-muted);">
+                <span>Sector Piantini, Santo Domingo, D.N.</span>
+                <span>Coordenadas: 18.4724° N, 69.9406° W</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         SECCIÓN DE SEGURIDAD, GARANTÍAS Y CONTINUIDAD OPERATIVA
+         Reemplaza la sección del incidente en la página.
+         Explica cómo blindamos a las PYMES para que nunca sufran pérdidas de datos.
+         ------------------------------------------------------------------- -->
+    <section id="garantias" class="section" style="background: var(--bg-surface-lowest);">
+      <div class="container">
+        
+        <div class="section-title-wrap center">
+          <div class="badge-tag badge-purple">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            <span>NUESTRO COMPROMISO CON TU NEGOCIO</span>
+          </div>
+          <h2 class="section-title">Garantías de Continuidad & Protección Financiera</h2>
+          <p class="section-subtitle">
+            Cómo aseguramos que tu información contable y fiscal permanezca intacta, disponible y protegida los 365 días del año.
+          </p>
+        </div>
+
+        <div class="grid-3" style="margin-top: 1.5rem;">
+          
+          <!-- Garantía 1: Monitoreo y Soporte Local 24/7 -->
+          <div class="card-glass">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">headset_mic</span>
+            </div>
+            <div class="badge-tag" style="margin-bottom: 0.75rem;">SOPORTE LOCAL EN RD</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Respuesta Rápida Garantizada</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Atención directa sin intermediarios. Nuestros técnicos en Santo Domingo atienden tus tickets y consultas telefónicas en menos de 15 minutos en días laborables.
+            </p>
+            <div style="background: var(--bg-surface-lowest); padding: 0.75rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-primary);">
+              Tiempo de Respuesta Promedio: 8 minutos
+            </div>
+          </div>
+
+          <!-- Garantía 2: Blindaje y Cero Pérdida de Datos -->
+          <div class="card-glass glow-emerald">
+            <div class="card-icon emerald">
+              <span class="material-symbols-outlined">security_update_good</span>
+            </div>
+            <div class="badge-tag badge-secondary" style="margin-bottom: 0.75rem;">ARQUITECTURA CLOUD</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Respaldos Horarios Redundantes</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Cada comprobante e-CF, libro contable y balance se replica automáticamente en centros de datos aislados geográficamente con cifrado AES-256.
+            </p>
+            <div style="background: var(--bg-surface-lowest); padding: 0.75rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-secondary);">
+              ✓ 100% Integridad de datos fiscales
+            </div>
+          </div>
+
+          <!-- Garantía 3: Auditoría y Cumplimiento DGII -->
+          <div class="card-glass glow-violet">
+            <div class="card-icon violet">
+              <span class="material-symbols-outlined">rule</span>
+            </div>
+            <div class="badge-tag badge-purple" style="margin-bottom: 0.75rem;">VALIDACIÓN TRIBUTARIA</div>
+            <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Certificación & Legalidad e-CF</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Cumplimiento estricto con las especificaciones técnicas de la DGII. Tus comprobantes electrónicos cuentan con validez legal plena en República Dominicana.
+            </p>
+            <div style="background: var(--bg-surface-lowest); padding: 0.75rem; border-radius: var(--radius-sm); font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-text-main);">
+              Estado: Homologado y Actualizado
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner para consultar el aviso histórico si se desea -->
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="#" data-trigger-incident-overlay class="btn btn-secondary btn-sm">
+            <span class="material-symbols-outlined text-[16px]">history_edu</span>
+            <span>Consultar Aviso de Seguridad Oficial & Evidencias del USB (2023)</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       ASISTENTE VIRTUAL INTELIGENTE SENTINEL AI
+       ===================================================================== -->
+  <aside aria-label="Asistente Virtual Sentinel AI">
+    <div id="sentinelFloatingBtn" class="sentinel-floating-pill" role="button" aria-label="Abrir asistente Sentinel AI">
+      <span class="status-dot-pulse"></span>
+      <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700;">Sentinel AI</span>
+      <span class="badge-tag badge-secondary" style="font-size: 0.65rem; padding: 2px 6px;">EN LÍNEA</span>
+    </div>
+
+    <div id="sentinelModal" class="sentinel-modal" role="dialog" aria-modal="true" aria-labelledby="sentinelContactTitle">
+      <div class="sentinel-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-primary); color: var(--color-primary-text); display: flex; align-items: center; justify-content: center;">
+            <span class="material-symbols-outlined text-[18px]">smart_toy</span>
+          </div>
+          <div>
+            <div id="sentinelContactTitle" style="font-weight: 700; font-size: 0.9rem;">Sentinel AI</div>
+            <div style="font-size: 0.7rem; color: var(--color-secondary);">Asistente Oficial de Ledger Digital</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="sentinelClearBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Limpiar conversación">
+            <span class="material-symbols-outlined text-[18px]">refresh</span>
+          </button>
+          <button id="sentinelCloseBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Cerrar ventana">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="sentinelChatHistory" class="sentinel-modal-body">
+        <div class="sentinel-message bot">
+          <div class="sentinel-msg-avatar">
+            <span class="material-symbols-outlined text-[16px]">smart_toy</span>
+          </div>
+          <div class="sentinel-msg-bubble">
+            ¡Hola! Si tienes preguntas sobre nuestra ubicación en Piantini, cómo agendar una reunión o nuestras garantías de seguridad de datos, pregúntame con gusto.
+          </div>
+        </div>
+      </div>
+
+      <div class="sentinel-quick-pills">
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Dónde están ubicados?">Ubicación y Sede</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Qué horarios tienen?">Horarios de Atención</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Qué garantías de seguridad ofrecen?">Garantías de Seguridad</button>
+      </div>
+
+      <form id="sentinelForm" class="sentinel-input-bar">
+        <input type="text" id="sentinelInput" placeholder="Escribe tu consulta..." autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm" style="padding: 0.5rem 0.8rem;" aria-label="Enviar">
+          <span class="material-symbols-outlined text-[18px]">send</span>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       PIE DE PÁGINA (FOOTER) PROFESIONAL
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2rem;">
+        
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 0.75rem;">
+            <span>Ledger<span class="accent">Digital</span></span>
+          </a>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; max-width: 380px;">
+            Plataforma contable en la nube y facturación electrónica autorizada por la DGII para PYMES en la República Dominicana.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Inicio</a></li>
+            <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+            <li><a href="servicios.html#cotizador" class="footer-link">Cotizador en Línea</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <ul class="footer-links" style="font-size: 0.88rem; color: var(--color-text-muted);">
+            <li>📍 Piantini, Santo Domingo, D.N.</li>
+            <li>📞 +1 (809) 555-0199</li>
+            <li>✉️ contacto@ledgerdigital.do</li>
+            <li>🕒 Lun - Vie: 8:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2024 Ledger Digital Dominicana S.R.L. — Todos los derechos reservados.
+        </div>
+        <div style="font-size: 0.82rem; color: var(--color-text-muted);">
+          Santo Domingo, República Dominicana 🇩🇴
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript con Comentarios Didácticos -->
+  <script src="js/main.js"></script>
+  <script src="js/glitch-recovery.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/easteregg.js"></script>
+
+  <!-- Script Específico de Validación del Formulario de Contacto -->
+  <script>
+    // Manejador del evento de envío del formulario de contacto
+    document.getElementById('secureContactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault(); // Previene la recarga del navegador
+      const toast = document.getElementById('formSuccessToast');
+      const btn = document.getElementById('btnSubmitForm');
+      
+      // Desactiva temporalmente el botón para prevenir envíos duplicados
+      if (btn) btn.disabled = true;
+      
+      // Simula el despacho seguro hacia el backend
+      setTimeout(() => {
+        if (toast) toast.style.display = 'flex';
+        if (btn) btn.disabled = false;
+        if (window.CyberAudio) CyberAudio.playSuccess();
+        this.reset(); // Restablece los campos del formulario
+      }, 500);
+    });
+  </script>
+</body>
+</html>

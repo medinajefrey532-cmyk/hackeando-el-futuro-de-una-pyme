@@ -1,0 +1,426 @@
+/* ==========================================================================
+   LEDGER DIGITAL DOMINICANA - GLITCH & RECOVERY STYLES (css/glitch.css)
+   Propósito: Efectos visuales de intrusión/fallo digital, pantalla de aviso
+              inicial del incidente 2023, bitácora de evidencias y animación
+              de reconstrucción del sistema en un solo clic.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   OVERLAY PRINCIPAL DE ERROR / MEMORIA DEL INCIDENTE (PANTALLA INICIAL)
+   -------------------------------------------------------------------------- */
+.crash-screen-overlay {
+  position: fixed;
+  /* Posicionamiento fijo que cubre toda la pantalla */
+  inset: 0;
+  /* Atajo moderno para top:0, right:0, bottom:0, left:0 */
+  background-color: #030712;
+  /* Tono negro azulado profundo que evoca un fallo de servidor */
+  z-index: 99999;
+  /* Nivel de capa máximo para situarse por encima de todo el sitio */
+  display: flex;
+  /* Contenedor flexible para alinear y centrar el contenido */
+  align-items: center;
+  /* Centrado horizontal de los elementos */
+  justify-content: flex-start;
+  /* Justificación superior para permitir scroll fluido si hay mucho texto */
+  flex-direction: column;
+  /* Disposición vertical en columna */
+  padding: 3rem 1.5rem;
+  /* Espaciado interno generoso para no pegar el contenido a los bordes */
+  overflow-y: auto;
+  /* Permite scroll vertical accesible en dispositivos móviles y laptops */
+  font-family: var(--font-mono, monospace);
+  /* Tipografía monoespaciada para acentuar el aspecto de consola/sistema */
+  color: #f43f5e;
+  /* Color rojizo de advertencia por defecto */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s ease;
+  /* Transición suave al restaurar */
+}
+
+/* Estado recuperado: Se oculta suavemente tras la pulsación del botón de reinvención */
+.crash-screen-overlay.recovered {
+  opacity: 0;
+  /* Desvanecimiento total */
+  transform: scale(1.04);
+  /* Ligera expansión espacial para dar sensación de desbloqueo */
+  pointer-events: none;
+  /* Desactiva los clics cuando ya no es visible */
+}
+
+/* --------------------------------------------------------------------------
+    EFECTO CRT SCANLINES (LÍNEAS DE ESCANEO DE PANTALLA ANTIGUA / TERMINAL)
+   -------------------------------------------------------------------------- */
+.crash-screen-overlay::before {
+  content: " ";
+  /* Genera la capa decorativa sin contenido HTML adicional */
+  display: block;
+  /* Comportamiento de bloque */
+  position: fixed;
+  /* Fijado para permanecer visible durante el desplazamiento */
+  inset: 0;
+  /* Cubre todo el viewport */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.45) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+  z-index: 2;
+  /* Debajo del texto pero encima del fondo */
+  background-size: 100% 3px, 6px 100%;
+  /* Crea la cuadrícula sutil de monitor CRT */
+  pointer-events: none;
+  /* No interrumpe los clics del usuario */
+}
+
+/* --------------------------------------------------------------------------
+    PARPADEO SUTIL DE MONITOR (CRT FLICKER)
+   Simula la oscilación lumínica propia de un panel industrial en contingencia.
+   -------------------------------------------------------------------------- */
+.crash-screen-overlay::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 16, 16, 0.12);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  animation: crtFlicker 0.18s infinite;
+  /* Animación cíclica rápida y tenue */
+}
+
+@keyframes crtFlicker {
+  0% {
+    opacity: 0.12;
+  }
+
+  50% {
+    opacity: 0.04;
+  }
+
+  100% {
+    opacity: 0.18;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CONTENEDOR DE LA PANTALLA DE FALLO Y ADVERTENCIA
+   Encapsula todo el mensaje oficial, el reto del USB, las evidencias y los botones.
+   -------------------------------------------------------------------------- */
+.crash-container {
+  max-width: 900px;
+  /* Ancho máximo cómodo para lectura y presentación */
+  width: 100%;
+  /* Ancho flexible */
+  position: relative;
+  /* Posicionamiento para respetar z-index sobre el fondo */
+  z-index: 5;
+  /* Por encima de los efectos scanlines */
+  text-align: center;
+  /* Alineación de texto central */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  /* Separación consistente entre bloques */
+  margin: auto 0;
+  /* Auto-centrado vertical en pantallas amplias */
+}
+
+/* Insignia de advertencia superior con animación de pulso */
+.crash-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 14px;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #ffb4ab;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  animation: pulseGlitch 1.6s infinite;
+}
+
+@keyframes pulseGlitch {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(244, 63, 94, 0.65);
+  }
+}
+
+/* Título principal del incidente con tipografía de alto impacto */
+.crash-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  /* Tamaño de fuente responsive adaptable */
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-shadow: 0 0 25px rgba(244, 63, 94, 0.7);
+  /* Brillo rojizo de alerta */
+  margin: 0;
+}
+
+/* Párrafo explicativo del incidente */
+.crash-desc {
+  font-size: 0.98rem;
+  color: #cbd5e1;
+  max-width: 780px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+    CAJA DE CITA DEL MISTERIOSO USB (EL MENSAJE DEL DESAFÍO)
+   -------------------------------------------------------------------------- */
+.crash-quote-box {
+  background: rgba(15, 23, 42, 0.85);
+  /* Fondo oscuro translúcido */
+  border-left: 4px solid #00f2fe;
+  /* Borde cian que representa el renacimiento tecnológico */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.25rem 1.75rem;
+  border-radius: 8px;
+  text-align: left;
+  margin: 0.25rem 0;
+  color: #e0fdff;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+}
+
+.crash-quote-author {
+  display: block;
+  font-size: 0.75rem;
+  color: #00f2fe;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   GRID DE EVIDENCIAS Y PRUEBAS DEL INCIDENTE DENTRO DEL AVISO INICIAL
+   -------------------------------------------------------------------------- */
+.crash-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Adaptación a 3 columnas o 1 según pantalla */
+  gap: 1rem;
+  width: 100%;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.crash-evidence-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 8px;
+  padding: 1.15rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.crash-evidence-card:hover {
+  border-color: rgba(0, 242, 254, 0.65);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.15);
+}
+
+.crash-evidence-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #00f2fe;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.crash-evidence-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.crash-evidence-text {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.crash-evidence-meta {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.72rem;
+  color: #10b981;
+  word-break: break-all;
+  margin-top: auto;
+}
+
+/* --------------------------------------------------------------------------
+    BOTÓN DE RECUPERACIÓN / ENTRADA Y ACCIONES
+   -------------------------------------------------------------------------- */
+.crash-actions-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn-recover {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #00f2fe 0%, #10b981 100%);
+  color: #051017;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.95rem 2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.5), 0 0 15px rgba(16, 185, 129, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-recover:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 50px rgba(0, 242, 254, 0.8), 0 0 25px rgba(16, 185, 129, 0.6);
+  filter: brightness(1.15);
+}
+
+.btn-recover:active {
+  transform: scale(0.98);
+}
+
+/* Botón secundario para descartar de inmediato sin esperar la animación */
+.btn-recover-skip {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #94a3b8;
+  font-size: 0.88rem;
+  padding: 0.95rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-recover-skip:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+    BARRA DE PROGRESO DE RESTAURACIÓN DINÁMICA
+   -------------------------------------------------------------------------- */
+.recovery-progress {
+  display: none;
+  /* Oculto hasta que el usuario activa la recuperación */
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00f2fe, #10b981);
+  box-shadow: 0 0 20px #00f2fe;
+  transition: width 0.12s linear;
+}
+
+.progress-status-text {
+  font-size: 0.85rem;
+  color: #00f2fe;
+  letter-spacing: 0.04em;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   9. UTILIDADES Y MICRO-ANIMACIONES TECNOLÓGICAS
+   -------------------------------------------------------------------------- */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cyber-border-glow {
+  position: relative;
+}
+
+.cyber-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.4), transparent 50%, rgba(16, 185, 129, 0.3));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.radar-blip {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary, #00f2fe);
+  box-shadow: 0 0 10px var(--color-primary, #00f2fe);
+  animation: radarPulse 2s infinite ease-out;
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

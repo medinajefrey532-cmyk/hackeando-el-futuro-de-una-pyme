@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y Codificación UTF-8 para Caracteres en Español -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger Digital | Contabilidad Cloud & Facturación Electrónica DGII en República Dominicana</title>
+  <meta name="description" content="Plataforma líder de gestión contable en la nube, emisión de comprobantes e-CF autorizados por la DGII y seguridad financiera para PYMES en República Dominicana.">
+  
+  <!-- Preconexión e Importación de Tipografías desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Íconos Vectoriales Material Symbols de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- Hojas de Estilos: Estilos Corporativos Globales y Efectos de Pantalla de Contingencia -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glitch.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       PANTALLA DE AVISO INICIAL: MEMORIA DEL INCIDENTE 2023 & PRUEBAS DEL USB
+       Requisito: Concentrar toda la historia del incidente, el mensaje del USB
+       y las evidencias técnicas en esta pantalla inicial de advertencia
+       y recuperación con un clic, liberando el contenido principal de la web.
+       ===================================================================== -->
+  <div id="crashScreenOverlay" class="crash-screen-overlay" role="dialog" aria-modal="true" aria-labelledby="crashTitle">
+    <div class="crash-container">
+      
+      <!-- Insignia superior animada de alerta de contingencia -->
+      <div class="crash-badge">
+        <span class="material-symbols-outlined text-[18px]">warning</span>
+        <span>AVISO OFICIAL // MEMORIA DEL INCIDENTE DIGITAL & REINVENCIÓN (2023)</span>
+      </div>
+      
+      <!-- Título de impacto visual -->
+      <h1 id="crashTitle" class="crash-title">
+        EL DESAFÍO DE LA REINVENCIÓN DIGITAL
+      </h1>
+      
+      <!-- Descripción histórica: Qué ocurrió con la empresa -->
+      <p class="crash-desc">
+        En 2023, nuestra empresa experimentó un borrado digital inesperado que eliminó los servidores y la web heredada.
+        En nuestras oficinas físicas apareció un dispositivo USB cifrado que contenía una advertencia y el detonante de nuestra transformación:
+      </p>
+
+      <!-- Caja destacada con la cita exacta del USB -->
+      <div class="crash-quote-box">
+        <p style="margin: 0; font-style: italic; font-size: 1rem; line-height: 1.6;">
+          "Tu negocio ha sido borrado de la existencia digital. Si quieres recuperarlo, deberás reinventarlo. Usa la tecnología, la creatividad y tu ingenio para traerlo de vuelta."
+        </p>
+        <span class="crash-quote-author">— MENSAJE ENCONTRADO EN EL DISPOSITIVO USB DE RESPALDO</span>
+      </div>
+
+      <!-- Cuadrícula de Evidencias Técnicas del Incidente (Reunidas aquí) -->
+      <div class="crash-evidence-grid">
+        <!-- Evidencia 1: El Dispositivo Físico -->
+        <div class="crash-evidence-card">
+          <div class="crash-evidence-tag">
+            <span class="material-symbols-outlined text-[16px]">usb</span>
+            <span>EVIDENCIA #01 // TOKEN FÍSICO</span>
+          </div>
+          <h2 class="crash-evidence-title">Hardware Token #LD-889</h2>
+          <p class="crash-evidence-text">
+            Dispositivo USB de contingencia que preservó los respaldos criptográficos inmutables originales de la empresa.
+          </p>
+          <div class="crash-evidence-meta font-mono">
+            SHA-256: e3b0c44298fc1c14...852b855
+          </div>
+        </div>
+
+        <!-- Evidencia 2: Bitácora de Recuperación -->
+        <div class="crash-evidence-card">
+          <div class="crash-evidence-tag">
+            <span class="material-symbols-outlined text-[16px]">terminal</span>
+            <span>EVIDENCIA #02 // LOG TÉCNICO</span>
+          </div>
+          <h2 class="crash-evidence-title">Bitácora de Restauración</h2>
+          <p class="crash-evidence-text">
+            Aislamiento del entorno vulnerable, migración inmediata a clústeres cloud Multi-AZ y 0% de pérdida de registros fiscales.
+          </p>
+          <div class="crash-evidence-meta font-mono" style="color: #38bdf8;">
+            Estatus: 100% Base de Datos Recuperada
+          </div>
+        </div>
+
+        <!-- Evidencia 3: Validación DGII -->
+        <div class="crash-evidence-card">
+          <div class="crash-evidence-tag">
+            <span class="material-symbols-outlined text-[16px]">verified</span>
+            <span>EVIDENCIA #03 // FISCALIDAD RD</span>
+          </div>
+          <h2 class="crash-evidence-title">Certificado de Cumplimiento DGII</h2>
+          <p class="crash-evidence-text">
+            Acreditación de consistencia tributaria en comprobantes e-CF tras la reconstrucción integral de nuestra plataforma.
+          </p>
+          <div class="crash-evidence-meta font-mono" style="color: #a78bfa;">
+            Auditoría: Aprobada y Operativa
+          </div>
+        </div>
+      </div>
+
+      <!-- Fila de Acciones: Botón de Recuperación en 1 Clic y Opción de Omisión -->
+      <div class="crash-actions-row">
+        <!-- Botón interactivo principal para ejecutar la restauración -->
+        <button id="btnStartRecovery" class="btn-recover" type="button">
+          <span class="material-symbols-outlined text-[22px]">restart_alt</span>
+          <span>Reinventar Negocio y Entrar a la Plataforma</span>
+        </button>
+
+        <!-- Botón secundario para entrar sin esperar la animación -->
+        <button id="btnSkipRecovery" class="btn-recover-skip" type="button" title="Acceder de inmediato">
+          <span>Omitir e Ingresar Directamente &rarr;</span>
+        </button>
+      </div>
+
+      <!-- Barra de Progreso de la Restauración Dinámica en la Nube -->
+      <div id="recoveryProgressBox" class="recovery-progress">
+        <div class="progress-bar-track">
+          <div id="recoveryProgressBar" class="progress-bar-fill"></div>
+        </div>
+        <span id="recoveryStatusText" class="progress-status-text">Iniciando protocolo de reinvención...</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       CABECERA INSTITUCIONAL Y NAVEGACIÓN
+       Contiene el logotipo, enlaces a páginas clave, cotizador rápido,
+       selector de tema y botón de menú responsivo para teléfonos móviles.
+       ===================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Identidad Corporativa / Logotipo SVG -->
+      <a href="index.html" class="brand-logo" aria-label="Inicio Ledger Digital">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#070c14"/>
+          <path d="M8 10H28M8 18H22M8 26H28" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3" fill="#10b981"/>
+        </svg>
+        <span>Ledger<span class="accent">Digital</span></span>
+      </a>
+
+      <!-- Menú de Navegación Principal -->
+      <nav id="navLinks" class="nav-links" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Botones de Acción de la Cabecera -->
+      <div class="header-actions">
+        <!-- Acceso directo al cotizador interactivo -->
+        <a href="servicios.html#cotizador" class="btn btn-primary btn-sm">
+          <span>Cotizar en Línea</span>
+        </a>
+
+        <!-- Selector de Tema Visual (Ciber Oscuro / Ejecutivo Claro / Matrix Terminal) -->
+        <button id="themeToggleBtn" class="theme-switch-btn" type="button" aria-label="Cambiar tema visual" title="Cambiar Tema">
+          <span id="themeToggleIcon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+        </button>
+
+        <!-- Botón de apertura del menú en pantallas móviles -->
+        <button id="mobileMenuBtn" class="mobile-menu-toggle" type="button" aria-label="Abrir Menú de Navegación">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       CONTENIDO PRINCIPAL: QUÉ ES LEDGER DIGITAL Y QUÉ HACEMOS
+       Totalmente enfocado en la propuesta de valor, los servicios contables,
+       la facturación DGII y la seguridad inquebrantable de la empresa.
+       ===================================================================== -->
+  <main>
+    
+    <!-- -------------------------------------------------------------------
+         HERO SECTION: PROPUESTA DE VALOR TECNOLÓGICA Y FINANCIERA
+         ------------------------------------------------------------------- -->
+    <section class="section" style="padding-top: 5rem;">
+      <div class="container">
+        <div class="grid-2" style="align-items: center; gap: 3rem;">
+          
+          <!-- Bloque de Texto Hero -->
+          <div>
+            <!-- Etiqueta de contexto nacional -->
+            <div class="badge-tag badge-secondary" style="margin-bottom: 1rem;">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              <span>PLATAFORMA TECH-FIN PARA PYMES EN REPÚBLICA DOMINICANA</span>
+            </div>
+            
+            <!-- Título Principal H1 con jerarquía visual de alto nivel -->
+            <h1 class="section-title" style="margin-bottom: 1.25rem;">
+              Contabilidad inteligente en la nube y <span class="text-gradient">facturación electrónica DGII</span>.
+            </h1>
+            
+            <!-- Resumen de servicios y beneficios directos -->
+            <p style="font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 2rem;">
+              Simplifica tus operaciones contables, emite comprobantes e-CF en segundos con validación inmediata y protege los datos financieros de tu empresa con tecnología de grado bancario.
+            </p>
+
+            <!-- Botones de Llamada a la Acción (CTA) -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="servicios.html" class="btn btn-primary btn-lg">
+                <span class="material-symbols-outlined text-[20px]">bolt</span>
+                <span>Explorar Servicios</span>
+              </a>
+              <a href="servicios.html#cotizador" class="btn btn-secondary btn-lg">
+                <span class="material-symbols-outlined text-[20px]">calculate</span>
+                <span>Cotizar en Línea</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Tarjeta Visual de Métricas Operativas y Seguridad en Tiempo Real -->
+          <div class="card-glass" style="padding: 2rem;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">
+              <span class="material-symbols-outlined text-primary">insights</span>
+              <span>Rendimiento & Blindaje de la Plataforma</span>
+            </h3>
+
+            <!-- Indicadores Numéricos -->
+            <div class="grid-2" style="gap: 1rem; margin-bottom: 1.5rem;">
+              <!-- Métrica 1: Disponibilidad Continua -->
+              <div style="background: var(--bg-surface-lowest); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="font-size: 0.75rem; color: var(--color-text-faint); text-transform: uppercase;">Disponibilidad (SLA)</div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--color-secondary); margin: 4px 0;">99.98%</div>
+                <div style="font-size: 0.8rem; color: var(--color-text-muted);">Servidores Multi-AZ 24/7</div>
+              </div>
+
+              <!-- Métrica 2: Facturación e-CF Exitosa -->
+              <div style="background: var(--bg-surface-lowest); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="font-size: 0.75rem; color: var(--color-text-faint); text-transform: uppercase;">Comprobantes e-CF</div>
+                <div style="font-size: 1.8rem; font-weight: 800; color: var(--color-primary); margin: 4px 0;">+14,000</div>
+                <div style="font-size: 0.8rem; color: var(--color-text-muted);">Validados sin rechazos ante DGII</div>
+              </div>
+            </div>
+
+            <!-- Lista de Garantías Inmediatas -->
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.88rem; color: var(--color-text-muted);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">check</span>
+                <span>Conexión y timbrado digital directo con la DGII Dominicana</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">check</span>
+                <span>Generación automática de formatos tributarios 606 y 607</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="material-symbols-outlined text-secondary" style="font-size: 18px;">check</span>
+                <span>Respaldos automáticos horarios con cifrado AES-256</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         SECCIÓN DE SERVICIOS CLAVE: QUÉ OFRECEMOS A LAS PYMES
+         ------------------------------------------------------------------- -->
+    <section class="section" style="background: var(--bg-surface-lowest);">
+      <div class="container">
+        
+        <!-- Encabezado de la Sección de Servicios -->
+        <div class="section-title-wrap center">
+          <div class="badge-tag">
+            <span>SOLUCIONES EMPRESARIALES</span>
+          </div>
+          <h2 class="section-title">Herramientas diseñadas para el crecimiento de tu PYME</h2>
+          <p class="section-subtitle">
+            Tecnología amigable e intuitiva que reduce el trabajo manual de contadores, administradores y directivos.
+          </p>
+        </div>
+
+        <!-- Cuadrícula de 3 Columnas con los Módulos Principales -->
+        <div class="grid-3" style="margin-top: 1.5rem;">
+          
+          <!-- Servicio 1: Facturación Electrónica e-CF -->
+          <article class="card-glass">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">receipt_long</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Facturación e-CF DGII</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.6;">
+              Emite comprobantes fiscales electrónicos (crédito fiscal B01/E31, consumo B02/E32 y gubernamental E45) con timbrado instantáneo autorizado por la DGII.
+            </p>
+          </article>
+
+          <!-- Servicio 2: Contabilidad Automatizada en la Nube -->
+          <article class="card-glass glow-emerald">
+            <div class="card-icon emerald">
+              <span class="material-symbols-outlined">cloud_done</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Contabilidad en la Nube</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.6;">
+              Gestiona libros diarios, catálogo de cuentas NIIF, compras y cobros desde cualquier dispositivo móvil o computadora sin instalaciones complejas.
+            </p>
+          </article>
+
+          <!-- Servicio 3: Blindaje de Datos y Respaldos Continuos -->
+          <article class="card-glass glow-violet">
+            <div class="card-icon violet">
+              <span class="material-symbols-outlined">security</span>
+            </div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Seguridad & Respaldos Continuos</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.6;">
+              Tu información contable se copia cada hora en centros de datos replicados geográficamente, blindando tu patrimonio contra cualquier pérdida o contingencia.
+            </p>
+          </article>
+        </div>
+
+        <!-- Enlace al catálogo detallado de servicios -->
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="servicios.html" class="btn btn-secondary">
+            <span>Ver Catálogo Completo y Funcionalidades &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         NUEVA SECCIÓN PRINCIPAL: QUIÉNES SOMOS & POR QUÉ CONFIAR EN NOSOTROS
+         Reemplaza la sección del incidente en la página.
+         Explica quiénes somos, qué hacemos y cómo garantizamos que nunca
+         vuelva a ocurrir una falla ni pérdida de información.
+         ------------------------------------------------------------------- -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Encabezado de la Sección de Quiénes Somos y Confianza -->
+        <div class="section-title-wrap center">
+          <div class="badge-tag badge-purple">
+            <span class="material-symbols-outlined text-[16px]">shield</span>
+            <span>QUIÉNES SOMOS & NUESTRA PROMESA DE CONFIANZA</span>
+          </div>
+          <h2 class="section-title">Liderazgo tecnológico con respaldo humano y seguridad total</h2>
+          <p class="section-subtitle">
+            En Ledger Digital combinamos la experiencia contable dominicana con ingeniería de software de alta gama para que tu negocio opere con tranquilidad absoluta.
+          </p>
+        </div>
+
+        <!-- Tarjeta Principal: Quiénes Somos y Misión -->
+        <div class="card-glass" style="padding: 2.5rem 2rem; margin-bottom: 2rem;">
+          <div class="grid-2" style="align-items: center; gap: 2.5rem;">
+            <div>
+              <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-text-main);">
+                Aliados estratégicos de las PYMES en República Dominicana
+              </h3>
+              <p style="color: var(--color-text-muted); font-size: 0.96rem; line-height: 1.7; margin-bottom: 1.2rem;">
+                Somos una empresa de tecnología financiera nacida en Santo Domingo, integrada por contadores públicos autorizados, auditores tributarios e ingenieros en sistemas. Nacimos con el propósito de poner en manos de los pequeños y medianos empresarios la misma potencia, agilidad y seguridad fiscal que utilizan las grandes corporaciones.
+              </p>
+              <p style="color: var(--color-text-muted); font-size: 0.96rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                No vendemos un programa cerrado: ofrecemos una plataforma viva, en constante actualización ante las normativas de la DGII y respaldada por un equipo que te asiste directamente vía telefónica, por correo o de forma presencial en nuestra sede en Piantini.
+              </p>
+
+              <!-- Enlace a contacto directo -->
+              <a href="contacto.html" class="btn btn-secondary btn-sm">
+                <span class="material-symbols-outlined text-[18px]">support_agent</span>
+                <span>Conoce a Nuestro Equipo en Santo Domingo</span>
+              </a>
+            </div>
+
+            <!-- Panel de Pilares de Confianza de Ledger Digital -->
+            <div style="background: var(--bg-surface-lowest); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.75rem;">
+              <h4 style="font-size: 1.1rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px; color: var(--color-primary);">
+                <span class="material-symbols-outlined">verified_user</span>
+                <span>Nuestros Cuatro Compromisos Inquebrantables</span>
+              </h4>
+
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <!-- Compromiso 1 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="background: rgba(0, 242, 254, 0.1); color: var(--color-primary); border-radius: 6px; padding: 6px; display: flex;">
+                    <span class="material-symbols-outlined text-[18px]">lock</span>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-main);">Cifrado de Grado Militar AES-256</div>
+                    <div style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4;">Tus balances, compras y facturas están cifradas en reposo y en tránsito.</div>
+                  </div>
+                </div>
+
+                <!-- Compromiso 2 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="background: rgba(16, 185, 129, 0.1); color: var(--color-secondary); border-radius: 6px; padding: 6px; display: flex;">
+                    <span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-main);">Arquitectura de Nube Multi-AZ</div>
+                    <div style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4;">Servidores distribuidos en múltiples zonas. Si un nodo falla, otro toma el control de inmediato.</div>
+                  </div>
+                </div>
+
+                <!-- Compromiso 3 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="background: rgba(167, 139, 250, 0.1); color: var(--color-tertiary); border-radius: 6px; padding: 6px; display: flex;">
+                    <span class="material-symbols-outlined text-[18px]">history</span>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-main);">Respaldos Inmutables Horarios</div>
+                    <div style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4;">Copias de seguridad automáticas cada 60 minutos con restauración garantizada en menos de 5 minutos.</div>
+                  </div>
+                </div>
+
+                <!-- Compromiso 4 -->
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="background: rgba(2, 132, 199, 0.1); color: #38bdf8; border-radius: 6px; padding: 6px; display: flex;">
+                    <span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+                  </div>
+                  <div>
+                    <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-main);">Cumplimiento Tributario Dominicano</div>
+                    <div style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4;">Homologación continua con la DGII para evitar multas, sanciones o rechazos de e-CF.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Cuadrícula de Métricas de Confianza Empresarial -->
+        <div class="grid-3" style="gap: 1.5rem;">
+          
+          <div class="card-glass" style="text-align: center; padding: 1.75rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.4rem;">+150 PYMES</div>
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem;">Empresas Activas en RD</div>
+            <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.5; margin: 0;">
+              Comercios, firmas de consultoría, talleres e industrias gestionan sus finanzas con nuestra plataforma.
+            </p>
+          </div>
+
+          <div class="card-glass glow-emerald" style="text-align: center; padding: 1.75rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-secondary); margin-bottom: 0.4rem;">0% Pérdida</div>
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem;">Integridad de Datos Garantizada</div>
+            <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.5; margin: 0;">
+              Protocolos de almacenamiento redundante aseguran que ningún asiento contable ni factura se extravíe.
+            </p>
+          </div>
+
+          <div class="card-glass glow-violet" style="text-align: center; padding: 1.75rem;">
+            <div style="font-size: 2.2rem; font-weight: 800; color: var(--color-tertiary); margin-bottom: 0.4rem;">&lt; 5 Minutos</div>
+            <div style="font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem;">Tiempo Récord de Recuperación (RTO)</div>
+            <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.5; margin: 0;">
+              En caso de cualquier eventualidad, tu sistema se restablece en minutos sin interrumpir tus ventas ni facturación.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         LLAMADO A LA ACCIÓN (CTA): CIERRE MOTIVADOR DE CONTACTO Y COTIZACIÓN
+         ------------------------------------------------------------------- -->
+    <section class="section" style="background: var(--bg-surface-lowest); text-align: center;">
+      <div class="container">
+        <div style="max-width: 650px; margin: 0 auto;">
+          <h2 class="section-title" style="margin-bottom: 1rem;">¿Listo para llevar tu contabilidad al siguiente nivel?</h2>
+          <p style="color: var(--color-text-muted); font-size: 1rem; margin-bottom: 2rem;">
+            Calcula tu presupuesto en línea con nuestro cotizador interactivo o agenda una demostración personalizada con uno de nuestros especialistas.
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="servicios.html#cotizador" class="btn btn-primary btn-lg">
+              <span class="material-symbols-outlined">calculate</span>
+              <span>Cotizar en Línea Ahora</span>
+            </a>
+            <a href="contacto.html" class="btn btn-secondary btn-lg">
+              <span class="material-symbols-outlined">mail</span>
+              <span>Contactar a un Asesor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       ASISTENTE VIRTUAL INTELIGENTE SENTINEL AI
+       Herramienta conversacional interactiva para responder dudas de clientes
+       sobre facturación electrónica DGII, servicios, cotizaciones y seguridad.
+       ===================================================================== -->
+  <aside aria-label="Asistente Virtual Sentinel AI">
+    <!-- Botón Flotante en la esquina inferior derecha -->
+    <div id="sentinelFloatingBtn" class="sentinel-floating-pill" role="button" aria-label="Abrir asistente Sentinel AI">
+      <span class="status-dot-pulse"></span>
+      <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700;">Sentinel AI</span>
+      <span class="badge-tag badge-secondary" style="font-size: 0.65rem; padding: 2px 6px;">EN LÍNEA</span>
+    </div>
+
+    <!-- Modal de la Ventana de Chat de Sentinel AI -->
+    <div id="sentinelModal" class="sentinel-modal" role="dialog" aria-modal="true" aria-labelledby="sentinelTitle">
+      <!-- Cabecera del Chatbot -->
+      <div class="sentinel-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-primary); color: var(--color-primary-text); display: flex; align-items: center; justify-content: center;">
+            <span class="material-symbols-outlined text-[18px]">smart_toy</span>
+          </div>
+          <div>
+            <div id="sentinelTitle" style="font-weight: 700; font-size: 0.9rem;">Sentinel AI</div>
+            <div style="font-size: 0.7rem; color: var(--color-secondary);">Asistente Oficial de Ledger Digital</div>
+          </div>
+        </div>
+        
+        <!-- Acciones del Chatbot: Limpiar Conversación y Cerrar -->
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="sentinelClearBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Limpiar conversación">
+            <span class="material-symbols-outlined text-[18px]">refresh</span>
+          </button>
+          <button id="sentinelCloseBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Cerrar ventana de asistencia">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Historial de Mensajes -->
+      <div id="sentinelChatHistory" class="sentinel-modal-body">
+        <div class="sentinel-message bot">
+          <div class="sentinel-msg-avatar">
+            <span class="material-symbols-outlined text-[16px]">smart_toy</span>
+          </div>
+          <div class="sentinel-msg-bubble">
+            ¡Hola! Soy <strong>Sentinel AI</strong>, asistente de Ledger Digital. ¿En qué te puedo orientar hoy? Puedes elegir una de las consultas rápidas de abajo o escribirme tu pregunta.
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de Consultas Rápidas Orientadas al Negocio y la Seguridad -->
+      <div class="sentinel-quick-pills">
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Qué servicios ofrecen?">¿Qué servicios ofrecen?</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Cómo funciona la facturación DGII?">Facturación DGII</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Cómo puedo cotizar en línea?">¿Cómo cotizar?</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Qué garantías de seguridad ofrecen?">Seguridad y Garantías</button>
+      </div>
+
+      <!-- Formulario de Entrada de Texto -->
+      <form id="sentinelForm" class="sentinel-input-bar">
+        <input type="text" id="sentinelInput" placeholder="Escribe tu consulta aquí..." autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm" style="padding: 0.5rem 0.8rem;" aria-label="Enviar mensaje">
+          <span class="material-symbols-outlined text-[18px]">send</span>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       PIE DE PÁGINA (FOOTER) PROFESIONAL & CORPORATIVO
+       Contiene enlaces institucionales, datos de contacto oficiales en RD
+       y acceso para reabrir el aviso de contingencia del USB si se desea.
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2rem;">
+        
+        <!-- Columna 1: Datos de la Marca -->
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 0.75rem;">
+            <span>Ledger<span class="accent">Digital</span></span>
+          </a>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; max-width: 380px;">
+            Plataforma contable en la nube y facturación electrónica autorizada por la DGII para pequeñas y medianas empresas en la República Dominicana.
+          </p>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Inicio</a></li>
+            <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+            <li><a href="servicios.html#cotizador" class="footer-link">Cotizador en Línea</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto Directa -->
+        <div>
+          <h4 class="footer-col-title">Sede Central</h4>
+          <ul class="footer-links" style="font-size: 0.88rem; color: var(--color-text-muted);">
+            <li>📍 Piantini, Santo Domingo, D.N.</li>
+            <li>📞 +1 (809) 555-0199</li>
+            <li>✉️ contacto@ledgerdigital.do</li>
+            <li>🕒 Lun - Vie: 8:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Línea de Derechos Reservados y Localización -->
+      <div class="footer-bottom">
+        <div>
+          © 2024 Ledger Digital Dominicana S.R.L. — Todos los derechos reservados.
+        </div>
+        <div style="font-size: 0.82rem; color: var(--color-text-muted);">
+          Santo Domingo, República Dominicana 🇩🇴
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       SCRIPTS JAVASCRIPT
+       - main.js: Control de temas visuales, navegación móvil y audio cibernético
+       - glitch-recovery.js: Controlador del aviso inicial, pruebas y restauración
+       - chatbot.js: Asistente virtual inteligente Sentinel AI
+       - easteregg.js: Acceso forense oculto (Código Konami / Clics)
+       ===================================================================== -->
+  <script src="js/main.js"></script>
+  <script src="js/glitch-recovery.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/easteregg.js"></script>
+</body>
+</html>

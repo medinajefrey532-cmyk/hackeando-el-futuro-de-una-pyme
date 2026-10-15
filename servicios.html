@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos Básicos y Codificación UTF-8 para Caracteres en Español -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger Digital | Servicios Contables & Cotizador en Línea</title>
+  <meta name="description" content="Servicios contables en la nube, facturación e-CF DGII y cotizador interactivo con cálculo en tiempo real en DOP y USD para PYMES en República Dominicana.">
+  
+  <!-- Preconexión e Importación de Tipografías desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Íconos Vectoriales Material Symbols de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- Hojas de Estilos: Estilos Corporativos Globales y Efectos de Pantalla de Contingencia -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glitch.css">
+</head>
+<body>
+
+
+
+  <!-- =====================================================================
+       CABECERA INSTITUCIONAL Y NAVEGACIÓN
+       ===================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logotipo de la Empresa -->
+      <a href="index.html" class="brand-logo" aria-label="Inicio Ledger Digital">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#070c14"/>
+          <path d="M8 10H28M8 18H22M8 26H28" stroke="#00f2fe" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="28" cy="18" r="3" fill="#10b981"/>
+        </svg>
+        <span>Ledger<span class="accent">Digital</span></span>
+      </a>
+
+      <!-- Menú de Enlaces Principales -->
+      <nav id="navLinks" class="nav-links" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link active">Servicios</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <!-- Acciones de Cabecera -->
+      <div class="header-actions">
+        <a href="#cotizador" class="btn btn-primary btn-sm">
+          <span>Cotizar en Línea</span>
+        </a>
+
+        <!-- Selector de Tema Visual -->
+        <button id="themeToggleBtn" class="theme-switch-btn" type="button" aria-label="Cambiar tema visual" title="Cambiar Tema">
+          <span id="themeToggleIcon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobileMenuBtn" class="mobile-menu-toggle" type="button" aria-label="Abrir Menú de Navegación">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       CONTENIDO PRINCIPAL: CATÁLOGO DE SERVICIOS & COTIZADOR INTERACTIVO
+       ===================================================================== -->
+  <main>
+    
+    <!-- -------------------------------------------------------------------
+         HERO DE SERVICIOS EMPRESARIALES
+         ------------------------------------------------------------------- -->
+    <section class="section" style="padding-top: 5rem;">
+      <div class="container">
+        
+        <div class="section-title-wrap center">
+          <div class="badge-tag badge-secondary">
+            <span>SERVICIOS EMPRESARIALES PARA PYMES</span>
+          </div>
+          <h1 class="section-title">Soluciones digitales que impulsan tu negocio</h1>
+          <p class="section-subtitle">
+            Tecnología contable ágil, blindada y 100% alineada con las normativas fiscales de la Dirección General de Impuestos Internos (DGII).
+          </p>
+        </div>
+
+        <!-- Cuadrícula de Servicios Detallados -->
+        <div class="grid-2" style="gap: 2rem; margin-top: 1.5rem;">
+          
+          <!-- Servicio 1: Facturación Electrónica e-CF -->
+          <article class="card-glass">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">receipt_long</span>
+            </div>
+            <h2 style="font-size: 1.35rem; margin-bottom: 0.6rem;">Facturación Electrónica e-CF</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+              Emisión oficial de comprobantes fiscales electrónicos (crédito fiscal B01/E31, consumidor final B02/E32 y gubernamental E45) con validación automática y timbrado en tiempo real ante la DGII.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--color-text-muted); padding: 0;">
+              <li>✓ Generación de e-NCF inmediata con código QR verificable.</li>
+              <li>✓ Envío automático de facturas en formato XML y PDF por correo.</li>
+              <li>✓ Cumplimiento total de la Ley de Facturación Electrónica RD.</li>
+            </ul>
+          </article>
+
+          <!-- Servicio 2: Contabilidad en la Nube -->
+          <article class="card-glass glow-emerald">
+            <div class="card-icon emerald">
+              <span class="material-symbols-outlined">cloud_done</span>
+            </div>
+            <h2 style="font-size: 1.35rem; margin-bottom: 0.6rem;">Contabilidad en la Nube</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+              Gestiona libros diarios, balances de comprobación, cuentas por cobrar y por pagar desde cualquier lugar con acceso multi-usuario seguro y control de roles.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--color-text-muted); padding: 0;">
+              <li>✓ Reportes 606 (compras) y 607 (ventas) listos para la DGII sin errores.</li>
+              <li>✓ Conciliación bancaria simple y rápida con extractos en Excel.</li>
+              <li>✓ Tablero visual interactivo con gráficas de flujo de caja en vivo.</li>
+            </ul>
+          </article>
+
+          <!-- Servicio 3: Seguridad y Respaldos Continuos -->
+          <article class="card-glass glow-violet">
+            <div class="card-icon violet">
+              <span class="material-symbols-outlined">security</span>
+            </div>
+            <h2 style="font-size: 1.35rem; margin-bottom: 0.6rem;">Seguridad y Respaldos Continuos</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+              Toda la información contable de tu negocio cuenta con copias de seguridad automáticas y cifrado bancario avanzado AES-256 para evitar pérdidas de datos.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--color-text-muted); padding: 0;">
+              <li>✓ Respaldos automáticos horarios en centros de datos redundantes (Multi-AZ).</li>
+              <li>✓ Blindaje total contra accesos no autorizados y ransomware.</li>
+              <li>✓ Disponibilidad contractual del 99.98% (SLA empresarial).</li>
+            </ul>
+          </article>
+
+          <!-- Servicio 4: Soporte y Asesoría Especializada en RD -->
+          <article class="card-glass">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">support_agent</span>
+            </div>
+            <h2 style="font-size: 1.35rem; margin-bottom: 0.6rem;">Soporte y Asesoría Especializada</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+              Acompañamiento personalizado de nuestro equipo técnico y contable en Santo Domingo para configurar tu catálogo de cuentas y resolver cualquier duda fiscal.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--color-text-muted); padding: 0;">
+              <li>✓ Capacitación inicial a tu equipo contable y administrativo.</li>
+              <li>✓ Asistencia telefónica directa, por WhatsApp y mediante Sentinel AI.</li>
+              <li>✓ Actualizaciones fiscales automáticas sin costos ocultos.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------------------
+         COTIZADOR EN LÍNEA INTERACTIVO (CONEXIÓN A API DE TASA DE CAMBIO)
+         Permite calcular planes en tiempo real en Pesos Dominicanos (DOP)
+         o Dólares Estadounidenses (USD) con descuento por ciclo anual.
+         ------------------------------------------------------------------- -->
+    <section id="cotizador" class="section" style="background: var(--bg-surface-lowest);">
+      <div class="container">
+        
+        <div id="quoteCalculatorWrap" class="quote-calculator" style="max-width: 900px; margin: 0 auto;">
+          
+          <!-- Encabezado del Cotizador -->
+          <div style="margin-bottom: 2rem;">
+            <div class="badge-tag badge-secondary" style="margin-bottom: 0.75rem;">
+              <span class="material-symbols-outlined text-[16px]">calculate</span>
+              <span>CALCULADORA DE PLANES EN TIEMPO REAL</span>
+            </div>
+            
+            <h2 style="font-size: 1.85rem; font-weight: 800; margin-bottom: 0.5rem;">
+              Calcula el presupuesto estimado para tu empresa
+            </h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+              Selecciona el tamaño de tu PYME y los módulos que requieres para estimar tu inversión en <strong>Pesos Dominicanos (RD$)</strong> o <strong>Dólares (USD)</strong>.
+            </p>
+
+            <!-- Badge dinámico de la tasa de cambio de la API -->
+            <div id="apiExchangeRateBadge" class="font-mono" style="display: inline-block; margin-top: 0.5rem; font-size: 0.8rem; background: var(--bg-surface-low); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-sm); color: var(--color-primary);">
+              Sincronizando tasa de cambio oficial...
+            </div>
+          </div>
+
+          <!-- Selectores de Escala de Empresa, Moneda y Ciclo de Facturación -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            
+            <!-- Selector de Escala de Empresa -->
+            <div class="form-group" style="margin-bottom: 0;">
+              <label class="form-label" for="calcCompanyScale">
+                <span>Tamaño de la Empresa</span>
+              </label>
+              <select id="calcCompanyScale" class="form-control" style="cursor: pointer;">
+                <option value="micro">Microempresa (1 - 10 colaboradores)</option>
+                <option value="small">Pequeña Empresa (11 - 50 colaboradores)</option>
+                <option value="medium">Mediana Empresa (51 - 150 colaboradores)</option>
+              </select>
+            </div>
+
+            <!-- Selector de Moneda y Ciclo de Pago -->
+            <div>
+              <label class="form-label">
+                <span>Moneda y Ciclo de Pago</span>
+              </label>
+              <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.25rem; flex-wrap: wrap;">
+                
+                <!-- Botones de Cambio de Moneda DOP / USD -->
+                <div class="calc-currency-toggle">
+                  <button type="button" class="calc-currency-btn active" data-curr="DOP">RD$ (DOP)</button>
+                  <button type="button" class="calc-currency-btn" data-curr="USD">USD ($)</button>
+                </div>
+
+                <!-- Opciones de Ciclo de Pago (Mensual vs Anual con Descuento) -->
+                <div style="display: flex; gap: 0.75rem; font-size: 0.85rem; color: var(--color-text-muted);">
+                  <label style="cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                    <input type="radio" name="billingCycle" id="billingCycleMonthly" checked style="accent-color: var(--color-primary);"> Mensual
+                  </label>
+                  <label style="cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                    <input type="radio" name="billingCycle" id="billingCycleAnnual" style="accent-color: var(--color-primary);"> Anual (-15% Descuento)
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Lista de Módulos Seleccionables (Checkboxes) -->
+          <h3 style="font-size: 1.05rem; margin-bottom: 1rem;">Módulos a incluir en la propuesta:</h3>
+          <div class="calc-services-grid" style="margin-bottom: 2rem;">
+            
+            <!-- Módulo 1: Contabilidad en la Nube -->
+            <label class="calc-service-item active">
+              <input type="checkbox" class="calc-module-checkbox" value="cloudZeroTrust" checked>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Contabilidad en la Nube</strong>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Libros contables, multi-usuario y catálogo NIIF</span>
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-primary); font-weight: bold; margin-top: 4px; display: block;">RD$ 4,500/mes base</span>
+              </div>
+            </label>
+
+            <!-- Módulo 2: Facturación e-CF DGII -->
+            <label class="calc-service-item active">
+              <input type="checkbox" class="calc-module-checkbox" value="ecfDgii" checked>
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Facturación e-CF DGII</strong>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Emisión oficial de comprobantes electrónicos fiscales</span>
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-primary); font-weight: bold; margin-top: 4px; display: block;">RD$ 3,200/mes base</span>
+              </div>
+            </label>
+
+            <!-- Módulo 3: Copias de Seguridad Avanzadas -->
+            <label class="calc-service-item">
+              <input type="checkbox" class="calc-module-checkbox" value="multiAzBackup">
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Copias de Seguridad Avanzadas</strong>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Respaldos horarios inmutables en centros Multi-AZ</span>
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-primary); font-weight: bold; margin-top: 4px; display: block;">RD$ 2,500/mes base</span>
+              </div>
+            </label>
+
+            <!-- Módulo 4: Soporte Prioritario 24/7 -->
+            <label class="calc-service-item">
+              <input type="checkbox" class="calc-module-checkbox" value="incident247">
+              <div>
+                <strong style="display: block; font-size: 0.95rem;">Soporte Prioritario 24/7</strong>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Atención telefónica directa con tiempo de respuesta prioritario</span>
+                <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-primary); font-weight: bold; margin-top: 4px; display: block;">RD$ 3,900/mes base</span>
+              </div>
+            </label>
+
+          </div>
+
+          <!-- Resumen y Desglose Financiero -->
+          <div class="calc-summary-box">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+              <span style="color: var(--color-text-muted); font-size: 0.88rem;">Módulos seleccionados:</span>
+              <span id="calcDisplayCount" class="badge-tag">2 módulos activos</span>
+            </div>
+
+            <!-- Fila de Subtotal -->
+            <div class="calc-price-row">
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">Subtotal Estimado:</span>
+              <span id="calcDisplaySubtotal" class="font-mono" style="font-weight: 700;">RD$ 7,700.00</span>
+            </div>
+
+            <!-- Fila de ITBIS (18% según normativa DGII de República Dominicana) -->
+            <div class="calc-price-row">
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">ITBIS (18% DGII):</span>
+              <span id="calcDisplayItbis" class="font-mono" style="color: var(--color-text-faint);">RD$ 1,386.00</span>
+            </div>
+
+            <!-- Fila de Inversión Total -->
+            <div class="calc-price-row" style="border-top: 1px dashed var(--color-border); padding-top: 0.75rem;">
+              <span style="font-size: 1.1rem; font-weight: 700;">Inversión Total Estimada:</span>
+              <div id="calcDisplayTotal" class="calc-price-big">RD$ 9,086.00</div>
+            </div>
+
+            <!-- Botón de Solicitud de Propuesta -->
+            <div style="margin-top: 1rem;">
+              <a href="contacto.html" class="btn btn-primary" style="width: 100%; text-align: center;">
+                <span>Solicitar esta Propuesta por Nuestro Formulario</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       ASISTENTE VIRTUAL INTELIGENTE SENTINEL AI
+       ===================================================================== -->
+  <aside aria-label="Asistente Virtual Sentinel AI">
+    <div id="sentinelFloatingBtn" class="sentinel-floating-pill" role="button" aria-label="Abrir asistente Sentinel AI">
+      <span class="status-dot-pulse"></span>
+      <span style="font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700;">Sentinel AI</span>
+      <span class="badge-tag badge-secondary" style="font-size: 0.65rem; padding: 2px 6px;">EN LÍNEA</span>
+    </div>
+
+    <div id="sentinelModal" class="sentinel-modal" role="dialog" aria-modal="true" aria-labelledby="sentinelServicesTitle">
+      <div class="sentinel-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--color-primary); color: var(--color-primary-text); display: flex; align-items: center; justify-content: center;">
+            <span class="material-symbols-outlined text-[18px]">smart_toy</span>
+          </div>
+          <div>
+            <div id="sentinelServicesTitle" style="font-weight: 700; font-size: 0.9rem;">Sentinel AI</div>
+            <div style="font-size: 0.7rem; color: var(--color-secondary);">Asistente Oficial de Ledger Digital</div>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="sentinelClearBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Limpiar conversación">
+            <span class="material-symbols-outlined text-[18px]">refresh</span>
+          </button>
+          <button id="sentinelCloseBtn" style="background: transparent; border: none; color: var(--color-text-muted); cursor: pointer;" title="Cerrar ventana">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="sentinelChatHistory" class="sentinel-modal-body">
+        <div class="sentinel-message bot">
+          <div class="sentinel-msg-avatar">
+            <span class="material-symbols-outlined text-[16px]">smart_toy</span>
+          </div>
+          <div class="sentinel-msg-bubble">
+            ¡Hola! ¿Deseas saber más sobre nuestros servicios de facturación e-CF, contabilidad en la nube o cómo funciona el cotizador? Pregúntame con gusto.
+          </div>
+        </div>
+      </div>
+
+      <div class="sentinel-quick-pills">
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Qué servicios ofrecen?">Servicios Disponibles</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Cómo funciona la facturación DGII?">Facturación DGII</button>
+        <button class="quick-pill-btn" data-sentinel-prompt="¿Cómo puedo cotizar en línea?">Cotizar un Plan</button>
+      </div>
+
+      <form id="sentinelForm" class="sentinel-input-bar">
+        <input type="text" id="sentinelInput" placeholder="Escribe tu consulta..." autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm" style="padding: 0.5rem 0.8rem;" aria-label="Enviar">
+          <span class="material-symbols-outlined text-[18px]">send</span>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       PIE DE PÁGINA (FOOTER)
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid" style="grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2rem;">
+        
+        <div>
+          <a href="index.html" class="brand-logo" style="margin-bottom: 0.75rem;">
+            <span>Ledger<span class="accent">Digital</span></span>
+          </a>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.6; max-width: 380px;">
+            Plataforma contable en la nube y facturación electrónica autorizada por la DGII para PYMES en la República Dominicana.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Inicio</a></li>
+            <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+            <li><a href="#cotizador" class="footer-link">Cotizador en Línea</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <ul class="footer-links" style="font-size: 0.88rem; color: var(--color-text-muted);">
+            <li>📍 Piantini, Santo Domingo, D.N.</li>
+            <li>📞 +1 (809) 555-0199</li>
+            <li>✉️ contacto@ledgerdigital.do</li>
+            <li>🕒 Lun - Vie: 8:00 AM - 6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2024 Ledger Digital Dominicana S.R.L. — Todos los derechos reservados.
+        </div>
+        <div style="font-size: 0.82rem; color: var(--color-text-muted);">
+          Santo Domingo, República Dominicana 🇩🇴
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript con Comentarios Didácticos -->
+  <script src="js/main.js"></script>
+  <script src="js/glitch-recovery.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/easteregg.js"></script>
+  <script src="js/cotizador.js"></script>
+</body>
+</html>
